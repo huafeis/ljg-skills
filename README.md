@@ -1,54 +1,46 @@
 # ljg-skills
 
-My custom skills for [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+我的 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 自定义技能集。
 
-## Skills
+## 技能
 
-| Skill | Description |
-|-------|-------------|
-| **ljg-card** | Content caster — transforms content into PNG visuals (long card, infograph, poster). Infograph mode uses a content-adaptive design system: the AI analyzes content density, structure, and emotion to generate unique visual compositions from scratch — no fixed template, style serves thought. |
-| **ljg-paper** | Paper reader — academic paper analysis pipeline |
-| **ljg-plain** | Plain language rewriter — makes complex content accessible |
-| **ljg-rank** | 降秩引擎 — decomposes any domain to its irreducible generators (秩). Strips a field down to the minimum independent forces that generate all observable phenomena. |
-| **ljg-x-download** | X media downloader — download images and videos from X/Twitter posts to ~/Downloads |
-| **ljg-skill-map** | Skill map viewer — visual overview of all installed skills |
-| **ljg-word** | English word mastery — deep-dive word deconstruction |
-| **ljg-writes** | Writing engine — think through an idea by writing it out |
+| 技能 | 说明 |
+|------|------|
+| **ljg-card** | 内容铸卡 — 将内容转为 PNG 视觉卡片（长图、信息图、海报）。信息图模式会根据内容密度、结构和情绪自动生成独特的视觉构图，没有固定模板，形式服务于内容。 |
+| **ljg-paper** | 论文阅读器 — 为非学术人士提取论文中的想法，重理解不重批判 |
+| **ljg-plain** | 白话引擎 — 把任何内容改写到聪明的十二岁小孩也能懂 |
+| **ljg-rank** | 降秩引擎 — 给一个领域，找出背后真正撑着它的几根独立的力。现象砍到不可再少的生成器，砍完能把现象一个个生回来，才算数。 |
+| **ljg-x-download** | X 媒体下载 — 将 X/Twitter 帖子中的图片和视频下载到 ~/Downloads |
+| **ljg-skill-map** | 技能地图 — 扫描所有已安装技能，渲染可视化总览 |
+| **ljg-word** | 英语单词精通 — 深度拆解一个英语单词的核心语义和顿悟时刻 |
+| **ljg-writes** | 写作引擎 — 带着一个观点出发，在写的过程中把它想透 |
 
-## Workflows
+## 工作流
 
-Workflows chain multiple skills into a single command.
+工作流将多个技能串联为一个命令。
 
-| Workflow | Skills | Description |
-|----------|--------|-------------|
-| **ljg-paper-flow** | ljg-paper → ljg-card | Reads papers + casts cards in one go |
-| **ljg-word-flow** | ljg-word → ljg-card -i | Deep-dive word analysis + infograph card in one go |
+| 工作流 | 技能链 | 说明 |
+|--------|--------|------|
+| **ljg-paper-flow** | ljg-paper → ljg-card | 读论文 + 做卡片一气呵成 |
+| **ljg-word-flow** | ljg-word → ljg-card -i | 单词深度分析 + 信息图卡片一气呵成 |
 
-## Install
-
-### Via Marketplace (Recommended)
-
-```
-/plugin marketplace add lijigang/ljg-skills
-```
-
-### Manual Install
+## 安装
 
 ```bash
 git clone https://github.com/lijigang/ljg-skills.git ~/.claude/plugins/ljg-skills
 ```
 
-Then restart Claude Code.
+然后重启 Claude Code。
 
-### ljg-card Dependencies
+### ljg-card 依赖
 
-`ljg-card` requires Playwright for screenshot capture:
+`ljg-card` 需要 Playwright 来截图：
 
 ```bash
 cd ~/.claude/plugins/ljg-skills && bash scripts/install.sh
 ```
 
-Or manually:
+或手动安装：
 
 ```bash
 cd ~/.claude/plugins/ljg-skills/skills/ljg-card && npm install && npx playwright install chromium
