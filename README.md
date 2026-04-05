@@ -68,5 +68,5 @@ git clone https://github.com/lijigang/ljg-skills.git ~/.claude/plugins/ljg-skill
 
 | 工作流 | 技能链 | 说明 |
 |--------|--------|------|
-| **ljg-paper-flow** | ljg-paper → ljg-card -l | 读论文 + 做长图卡片一气呵成 |
+| **ljg-paper-flow** | ljg-paper → ljg-card -c | 读论文 + 做漫画卡片一气呵成 |
 | **ljg-word-flow** | ljg-word → ljg-card -i | 单词深度分析 + 信息图卡片一气呵成 |
